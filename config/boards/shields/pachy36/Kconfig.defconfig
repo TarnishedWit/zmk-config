@@ -1,0 +1,6 @@
+if SHIELD_PACHY36
+
+config ZMK_KEYBOARD_NAME
+	default "pachy36"
+	
+endif
