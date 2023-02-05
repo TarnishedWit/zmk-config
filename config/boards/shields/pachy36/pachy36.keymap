@@ -1,0 +1,104 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#define DEFAULT 0
+#define NUMSYM 1
+#define NAVIG 2
+#define FUNC 3
+#define GAMG 4
+
+/ {
+
+	behaviors {
+		hm: homerow_mods {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS";
+			#binding-cells = <2>;
+			tapping-term-ms = <250>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+	};
+
+	combos {
+		compatible = "zmk,combos";
+		combo_esc {
+			timeout-ms = <50>;
+			key-positions = <0 1>;
+			layers = <0>
+			bindings = <&kp ESC>;
+		};
+		combo_tab {
+			timeout-ms = <50>;
+			key-positions = <10 11>;
+			bindings = <&kp TAB>;
+		};
+		combo_bktab {
+			timeout-ms = <50>;
+			key-positions = <20 21>;
+			bindings = <&kp LS(TAB)>;
+		};
+		combo_bspc {
+			timeout-ms = <50>;
+			key-positions = <8 9>;
+			bindings = <&kp BSPC>;
+		};
+		combo_quot {
+			timeout-ms = <50>;
+			key-positions = <18 19>;
+			layers = <0>
+			bindings = <&kp SQT>;
+		};
+		combo_ltgam {
+			timeout-ms = <50>;
+			key-positions = <28 29>;
+			bindings = <&tog GAMG>;
+	
+	
+	keymap {
+		compatible = "zmk,keymap";
+		
+		default_layer {
+		
+			bindings = <
+				&kp Q    &kp W    &kp F     &kp P     &kp B                                                 &kp J     &kp L     &kp U     &kp Y     &kp SEMI   
+				&hm LGUI A    &hm LALT R    &hm LSHIFT S     &hm LCTRL T     &kp G                          &kp M     &hm RCTRL N &hm RSHIFT E &hm RALT I &hm RGUI O
+				&kp Z    &kp X    &kp C     &kp D     &kp V                                                 &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH
+								&lt NAVIG DEL &hm LSHIFT(SPACE)   &lt NUMSYM RET                                   &lt NUMSYM RET &kp BSPC  &mo FUNC
+			>;
+		};
+		
+		number_layer {
+			bindings = <
+				&kp EQUAL    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS             &kp LBKT   &kp AMPS &kp STAR  &kp LPAR  &kp RPAR
+				&kp KP_SLASH &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS              &kp UNDER  &kp DLLR &kp PRCNT &kp CARET &kp BSLH
+				&kp AMPS     &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp RET                  &kp KP_NUM &kp EXCL &kp AT    &kp HASH  &kp PIPE
+									   &kp KP_DOT &kp KP_N0 &trans                  &trans     &trans   &trans 
+			>;
+		};
+		
+		navig_layer {
+			bindings = <
+				&kp LC(Z)   &kp LC(X)  &kp LC(C) &kp LC(V) &kp LC(Y)                &none    &none     &none      &none     &none
+				&kp LEFT    &kp DOWN   &kp UP    &kb RIGHT &kp LC(F)                &none    &kp RCTRL &kp RSHIFT &kp RALT  &kp RGUI
+				&kp HOME    &kp PG_UP  &kp PG_DN &kp END   &kp INS                  &none    &none     &none      &none     &none
+									   &trans    &trans    &trans                   &trans   &trans    &trans
+			>;
+		};
+		
+		funct_layer {
+			bindings = <
+				&kp F10    &kp F7    &kp F8     &kp F9    &kp PSCRN                 &none   &none     &none       &none    &kp C_VOL_UP
+				&kp F11    &kp F4    &kp F5     &kp F6    &kp SLCK                  &none   &trans    &trans      &trans   &trans
+				&kp F12    &kp F1    &kp F2     &kp F3    &kp PAUSE_BREAK           &none   &none     &none       &none    &kp C_VOL_DN
+									 &trans     &trans    &trans                    &trans   &trans     &trans
+			>;
+		};
+		
+		gamg_layer {
+			bindings = <
+				&kp Q    &kp W    &kp F     &kp P     &kp B                         &kp J     &kp L     &kp U     &kp Y     &kp SEMI   
+				&kp A    &kp R    &kp S     &kp T     &kp G                         &kp M     &kp N     &kp E     &kp I     &kp O
+				&kp Z    &kp X    &kp C     &kp D     &kp V                         &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH
+								&kp KP_N1   &kp SPACE &kp KP_N0                     &trans    &trans    &trans
+};
