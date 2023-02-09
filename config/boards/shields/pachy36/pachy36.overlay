@@ -46,16 +46,19 @@
 		>;
 	};
 	
-};
 
-nice_view_spi: &spi0 {
-	compatible = "nordic,nrf-spim";
-	sck-pin = <&pro_micro 15>;
-	mosi-pin = <&pro_micro 16>;
-	miso-pin = <&pro_micro 14>;
-	cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
-};
 
-&pro_micro_i2c {
-	status = "disabled";
+	nice_view_spi: &spi0 {
+		compatible = "nordic,nrf-spim";
+		sck-pin = <&pro_micro 15>;
+		mosi-pin = <&pro_micro 16>;
+		miso-pin = <&pro_micro 14>;
+		cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+	};
+
+	&pro_micro_i2c {
+		status = "disabled";
+	};	
+
+
 };
