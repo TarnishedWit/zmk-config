@@ -4,6 +4,7 @@
 	chosen {
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
+		zephyr,display = &nice_view_spi;
 	};
 	
 	kscan0: kscan_0 {
@@ -12,7 +13,8 @@
 		diode-direction = "col2row";
 		
 		col-gpios
-			= <&pro_micro 3 GPIO_ACTIVE_HIGH>
+			= <&pro_micro 0 GPIO_ACTIVE_HIGH>
+			, <&pro_micro 3 GPIO_ACTIVE_HIGH>
 			, <&pro_micro 4 GPIO_ACTIVE_HIGH>
 			, <&pro_micro 5 GPIO_ACTIVE_HIGH>
 			, <&pro_micro 6 GPIO_ACTIVE_HIGH>
@@ -20,7 +22,6 @@
 			, <&pro_micro 8 GPIO_ACTIVE_HIGH>
 			, <&pro_micro 9 GPIO_ACTIVE_HIGH>
 			, <&pro_micro 10 GPIO_ACTIVE_HIGH>
-			, <&pro_micro 14 GPIO_ACTIVE_HIGH>
 			;
 		row-gpios
 			= <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -45,4 +46,16 @@
 		>;
 	};
 	
+};
+
+nice_view_spi: &spi0 {
+	compatible = "nordic,nrf-spim";
+	sck-pin = <&pro_micro 15>;
+	mosi-pin = <&pro_micro 16>;
+	miso-pin = <&pro_micro 14>;
+	cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+};
+
+&pro_micro_i2c {
+	status = "disabled";
 };
