@@ -3,4 +3,15 @@ if SHIELD_PACHY36
 config ZMK_KEYBOARD_NAME
 	default "pachy36"
 	
+if ZMK_DISPLAY
+
+config I2C
+	default y
+
+config SSD1306
+	default y
+
+config SSD1306_REVERSE_MODE
+	default y
+	
 endif
