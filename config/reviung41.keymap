@@ -62,7 +62,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Text-Layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP    |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
@@ -72,12 +72,12 @@
             bindings = <
 &kp GRAVE  &kp Q       &kp W       &kp F        &kp P        &kp B               &kp J  &kp L          &kp U        &kp Y       &kp SEMICOLON  &kp BSPC
 &kp TAB    &mt LGUI A  &mt LALT R  &mt LSHFT S  &mt LCTRL T  &kp G               &kp M  &mt RCTRL N    &mt RSHFT E  &mt RALT I  &mt RGUI O     &kp SQT
-&kp DEL    &kp Z       &kp X       &kp C        &kp D        &kp V               &kp K  &kp H          &kp COMMA    &kp DOT     &kp FSL        &mt RSHFT RET
+&kp DEL    &kp Z       &kp X       &kp C        &kp D        &kp V               &kp K  &kp H          &kp COMMA    &kp DOT     &kp FSLH       &mt RSHFT RET
                                    &mo 1        &kp SPACE           &lt 2 ENTER         &kp BACKSPACE  &mo 3
             >;
         };
 
-        lower_layer {
+        Nav-Layer {
             // ------------------------------------------------------------------------------------
             // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      DEL    |
             // |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |       ~     |
@@ -92,7 +92,7 @@
             >;
         };
 
-        raise_layer {
+        NumSym-Layer {
             // ----------------------------------------------------------------------------
             // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
             // |    |  -  |  =  |  [  |  ]  |  \  |   | F1  | F2  | F3  | F4  | F5  | F6  |
@@ -107,7 +107,7 @@
             >;
         };
 
-        adjust_layer {
+        Func-Layer {
             // -----------------------------------------------------------------------------------------
             // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
             // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |       |     |     |     |     |        |
@@ -122,7 +122,7 @@
             >;
         };
 
-        layer_4 {
+        Lighting-Layer {
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans          &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans
 &trans  &sk LGUI  &sk LALT  &sk LSHFT  &sk LCTRL  &trans          &trans           &rgb_ug RGB_TOG  &trans           &trans           &trans           &trans
