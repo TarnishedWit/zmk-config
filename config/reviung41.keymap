@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mt {
-    tapping-term-ms = <220>;
+    tapping-term-ms = <175>;
     flavor = "balanced";
     require-prior-idle-ms = <50>;
     quick-tap-ms = <75>;
