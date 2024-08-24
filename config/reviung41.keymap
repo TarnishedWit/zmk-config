@@ -85,7 +85,7 @@
 &kp GRAVE  &kp Q       &kp W       &kp F        &kp P        &kp B               &kp J  &kp L          &kp U        &kp Y       &kp SEMICOLON  &kp BSPC
 &kp TAB    &mt LGUI A  &mt LALT R  &mt LSHFT S  &mt LCTRL T  &kp G               &kp M  &mt RCTRL N    &mt RSHFT E  &mt RALT I  &mt RGUI O     &kp SQT
 &kp DEL    &kp Z       &kp X       &kp C        &kp D        &kp V               &kp K  &kp H          &kp COMMA    &kp DOT     &kp FSLH       &mt RSHFT RET
-                                   &mo 1        &kp SPACE           &lt 2 ENTER         &kp BACKSPACE  &mo 3
+                                   &mo 1        &mt LSHFT SPACE           &lt 2 ENTER         &mt RSHFT BACKSPACE  &mo 3
             >;
         };
 
