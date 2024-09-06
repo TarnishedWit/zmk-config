@@ -26,9 +26,9 @@
     combos {
         compatible = "zmk,combos";
 
-        QWESC {
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
+        QFTILDE {
+            bindings = <&kp GRAVE>;
+            key-positions = <1 3>;
         };
 
         TAB_BACK {
@@ -81,7 +81,7 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp GRAVE         &kp Q       &kp W       &kp F         &kp P            &kp B               &kp J  &kp L                &kp U        &kp Y       &kp SEMICOLON  &kp BSPC
+&kp ESCAPE        &kp Q       &kp W       &kp F         &kp P            &kp B               &kp J  &kp L                &kp U        &kp Y       &kp SEMICOLON  &kp BSPC
 &kp TAB           &mt LGUI A  &mt LALT R  &mt LSHFT S   &mt LCTRL T      &kp G               &kp M  &mt RCTRL N          &mt RSHFT E  &mt RALT I  &mt RGUI O     &kp SQT
 &kp LEFT_BRACKET  &kp Z       &kp X       &kp C         &kp D            &kp V               &kp K  &kp H                &kp COMMA    &kp DOT     &kp FSLH       &kp RIGHT_BRACKET
                                           &lt 1 DELETE  &mt LSHFT SPACE         &lt 2 ENTER         &mt RSHFT BACKSPACE  &lt 3 INS
