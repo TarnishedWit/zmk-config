@@ -11,7 +11,7 @@
 
 &mt {
     tapping-term-ms = <175>;
-    flavor = "tap-peferred";
+    flavor = "tap-preferred";
     require-prior-idle-ms = <50>;
     quick-tap-ms = <75>;
     hold-trigger-key-positions = <13 14 15 16 19 20 21 22>;
