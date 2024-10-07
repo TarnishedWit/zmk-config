@@ -72,7 +72,7 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 23 22 21 20 18 19 30 31 32 33 34 35>;
             flavor = "balanced";
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <(-1)>;
+            require-prior-idle-ms = <75>;
             hold-trigger-on-release;
         };
 
@@ -84,7 +84,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <1000>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <(-1)>;
+            require-prior-idle-ms = <75>;
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <4 5 12 13 14 15 16 17 24 25 26 27 28 29 3 2 0 1>;
@@ -102,10 +102,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp Q       &kp W       &kp F         &kp P            &kp B               &kp J  &kp L                &kp U        &kp Y       &kp SEMICOLON  &kp BSPC
-&kp TAB           &mt LGUI A  &mt LALT R  &mt LSHFT S   &mt LCTRL T      &kp G               &kp M  &mt RCTRL N          &mt RSHFT E  &mt RALT I  &mt RGUI O     &kp SQT
-&kp LEFT_BRACKET  &kp Z       &kp X       &kp C         &kp D            &kp V               &kp K  &kp H                &kp COMMA    &kp DOT     &kp FSLH       &kp RIGHT_BRACKET
-                                          &lt 1 DELETE  &mt LSHFT SPACE         &lt 2 ENTER         &mt RSHFT BACKSPACE  &lt 3 INS
+&kp ESCAPE        &kp Q        &kp W        &kp F         &kp P             &kp B               &kp J  &kp L                 &kp U         &kp Y        &kp SEMICOLON  &kp BSPC
+&kp TAB           &hrl LGUI A  &hrl LALT R  &hrl LSHFT S  &hrl LCTRL T      &kp G               &kp M  &hrr RCTRL N          &hrr RSHFT E  &hrr RALT I  &hrr RGUI O    &kp SQT
+&kp LEFT_BRACKET  &kp Z        &kp X        &kp C         &kp D             &kp V               &kp K  &kp H                 &kp COMMA     &kp DOT      &kp FSLH       &kp RIGHT_BRACKET
+                                            &lt 1 DELETE  &hrl LSHFT SPACE         &lt 2 ENTER         &hrr RSHFT BACKSPACE  &lt 3 INS
             >;
         };
 
