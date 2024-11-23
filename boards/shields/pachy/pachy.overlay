@@ -9,10 +9,11 @@
 
 / {
     chosen {
+	zmk,matrix-transform = &matrix_transform0;
 	zmk,physical-layout = &physical_layout0;
     };
 
-    default_transform: keymap_transform0 {
+    matrix_transform0: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <10>;
         rows = <4>;
