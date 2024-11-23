@@ -6,7 +6,7 @@
         display-name = "pachy36";
 
         kscan = <&kscan0>;
-        transform = <&matrix_transform0>;
+        transform = <&matrix_transform_0>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   88       0     0     0>
@@ -53,7 +53,7 @@
         display-name = "pachy34";
 
         kscan = <&kscan1>;
-        transform = <&matrix_transform1>;
+        transform = <&matrix_transform_1>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   88       0     0     0>
