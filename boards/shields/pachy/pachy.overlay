@@ -9,7 +9,6 @@
 
 / {
     chosen {
-	zmk,matrix-transform = &matrix_transform0;
 	zmk,physical-layout = &physical_layout0;
     };
 
