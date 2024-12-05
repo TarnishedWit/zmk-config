@@ -102,10 +102,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp Q        &kp W        &kp F         &kp P             &kp B               &kp J  &kp L                 &kp U         &kp Y        &kp SEMICOLON  &kp BSPC
-&kp TAB           &hrl LGUI A  &hrl LALT R  &hrl LSHFT S  &hrl LCTRL T      &kp G               &kp M  &hrr RCTRL N          &hrr RSHFT E  &hrr RALT I  &hrr RGUI O    &kp SQT
-&kp LEFT_BRACKET  &kp Z        &kp X        &kp C         &kp D             &kp V               &kp K  &kp H                 &kp COMMA     &kp DOT      &kp FSLH       &kp RIGHT_BRACKET
-                                            &lt 1 DELETE  &hrl LSHFT SPACE         &lt 2 ENTER         &hrr RSHFT BACKSPACE  &lt 3 INS
+&kp ESCAPE        &kp W            &kp L        &kp Y         &kp P             &kp B               &kp Z  &kp F                 &kp O         &kp U        &kp SQT      &kp BSPC
+&kp TAB           &hrl LEFT_GUI C  &hrl LALT R  &hrl LSHFT S  &hrl LCTRL T      &kp G               &kp M  &hrr RCTRL N          &hrr RSHFT E  &hrr RALT I  &hrr RGUI A  &kp SEMICOLON
+&kp LEFT_BRACKET  &kp Q            &kp J        &kp V         &kp D             &kp K               &kp X  &kp H                 &kp SLASH     &kp COMMA    &kp PERIOD   &kp RIGHT_BRACKET
+                                                &lt 1 DELETE  &hrl LSHFT SPACE         &lt 2 ENTER         &hrr RSHFT BACKSPACE  &lt 3 INS
             >;
         };
 
@@ -132,10 +132,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans  &kp EQUAL     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS             &kp PIPE        &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &trans
-&trans  &kp SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS              &kp UNDERSCORE  &kp DLLR  &kp PRCNT  &kp CARET  &GRCO     &trans
-&trans  &kp ASTERISK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER          &SQBK           &kp EXCL  &kp AT     &kp HASH   &CLBK     &trans
-                                       &kp DOT          &kp KP_NUMBER_0                &trans                  &trans    &trans
+&trans  &kp EQUAL     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS           &kp PIPE        &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &trans
+&trans  &kp SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS            &kp UNDERSCORE  &kp DLLR  &kp PRCNT  &kp CARET  &GRCO     &trans
+&trans  &kp ASTERISK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD          &SQBK           &kp EXCL  &kp AT     &kp HASH   &CLBK     &trans
+                                       &kp DOT          &kp KP_NUMBER_0              &trans                  &trans    &trans
             >;
         };
 
