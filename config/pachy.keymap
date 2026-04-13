@@ -116,11 +116,11 @@
             hold-trigger-key-positions = <4 12 13 14 24 3 2 0 1 36 10 11 20 21 22 23 30 31 32 33 34 35>;
         };
 
-        qte_semi: qte_semi {
+        cma_semi: cma_semi {
             compatible = "zmk,behavior-tap-dance";
-            label = "QTE_SEMI";
+            label = "CMA_SEMI";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp SEMICOLON>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
 
             tapping-term-ms = <175>;
         };
@@ -146,18 +146,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Colemak-Layer {
-            // -------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP    |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
-            //                         | ALT | LWR | SPC | RSE  | ALT |
-
-            bindings = <
-&kp Q  &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp U  &kp Y  &qte_semi  &hrl LGUI A  &hrl LALT R  &hrl LSHFT S  &hrl LCTRL T  &kp G  &kp M  &hrr RCTRL N  &hrr RSHFT E  &hrr RALT I  &hrr RGUI O  &kp Z  &kp X  &kp C  &kp D  &kp V  &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &left_outer  &hrl LSHFT SPACE  &lt 3 ENTER  &lt 3 ENTER  &hrr RSHFT BACKSPACE  &right_outer
-            >;
-        };
-
         Canary-Layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP    |
@@ -166,7 +154,19 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp W  &kp L  &kp Y  &kp P  &kp B  &kp Z  &kp F  &kp O  &kp U  &qte_semi  &hrl LGUI C  &hrl LALT R  &hrl LSHFT S  &hrl LCTRL T  &kp G  &kp M  &hrr RCTRL N  &hrr RSHFT E  &hrr RALT I  &hrr RGUI A  &kp Q  &kp J  &kp V  &kp D  &kp K  &kp X  &kp H  &kp SLASH  &kp COMMA  &kp PERIOD  &trans  &trans  &trans  &trans  &trans  &trans
+&kp W  &kp L  &kp Y  &kp P  &kp B  &kp Z  &kp F  &kp O  &kp U  &kp APOS  &hrl LGUI C  &hrl LALT R  &hrl LSHFT S  &hrl LCTRL T  &kp G  &kp M  &hrr RCTRL N  &hrr RSHFT E  &hrr RALT I  &hrr RGUI A  &kp Q  &kp J  &kp V  &kp D  &kp K  &kp X  &kp H  &kp SLASH  &cma_semi  &kp PERIOD  &left_outer  &hrl LSHFT SPACE  &lt 3 ENTER  &lt 3 ENTER  &hrr RSHFT BACKSPACE  &right_outer
+            >;
+        };
+
+        Typing-Layer {
+            // -------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP    |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
+            //                         | ALT | LWR | SPC | RSE  | ALT |
+
+            bindings = <
+&kp W  &kp L  &kp Y  &kp P  &kp B  &kp Z  &kp F  &kp O  &kp U  &cma_semi  &kp C  &kp R  &kp S  &kp T  &kp G  &kp M  &kp N  &kp E  &kp I  &kp A  &kp Q  &kp J  &kp V  &kp D  &kp K  &kp X  &kp H  &kp SLASH  &kp COMMA  &kp PERIOD  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
